@@ -1,0 +1,19 @@
+.screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.text {
+  display: flex;
+  margin-left: 8px;
+  font-size: 24px;
+}
