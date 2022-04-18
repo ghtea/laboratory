@@ -16,7 +16,7 @@ const RefPage: NextPage = () => {
   },[key, keyRef])
 
   useEffect(()=>{
-    console.log("keyRef: ", keyRef); // TODO: remove 
+    console.log("key from ref: ", keyRef.current); // TODO: remove 
   },[keyRef])
 
   return (
