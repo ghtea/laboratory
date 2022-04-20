@@ -9,6 +9,7 @@ const Home: NextPage = () => {
       <Link href={"/full-with-gap"}>full-with-gap</Link>
       <Link href={"/interval"}>interval</Link>
       <Link href={"/ref"}>ref</Link>
+      <Link href={"/emotion"}>emotion</Link>
     </div>
   )
 }
