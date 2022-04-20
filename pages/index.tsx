@@ -7,6 +7,8 @@ const Home: NextPage = () => {
     <div className={styles.container}>
       <Link href={"/checkbox"}>checkbox</Link>
       <Link href={"/full-with-gap"}>full-with-gap</Link>
+      <Link href={"/interval"}>interval</Link>
+      <Link href={"/ref"}>ref</Link>
     </div>
   )
 }
