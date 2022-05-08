@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import React, {useCallback, useEffect, useMemo, useState} from 'react'
 import {debounce, throttle} from "lodash"
 
+// ref: https://dmitripavlutin.com/react-throttle-debounce/
 const TDOnePage: NextPage = () => {
   // debounce
   const [value, setValue] = useState("")
@@ -45,6 +46,13 @@ const TDOnePage: NextPage = () => {
       window.removeEventListener('scroll', handleScroll)
     }
   }, [handleScroll])
+
+  useEffect(()=>{
+    return () => {
+      debouncedLogInput.cancel()
+      throttledLogScroll.cancel()
+    }
+  },[debouncedLogInput, throttledLogScroll])
 
   return (
     <div style={{height: 5000}}>
