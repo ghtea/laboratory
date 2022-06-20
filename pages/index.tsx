@@ -10,6 +10,7 @@ const Home: NextPage = () => {
       <Link href={"/interval"}>interval</Link>
       <Link href={"/ref"}>ref</Link>
       <Link href={"/emotion"}>emotion</Link>
+      <Link href={"/animations/swiper"}>animations/swiper</Link>
     </div>
   )
 }
