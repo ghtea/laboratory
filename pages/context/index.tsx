@@ -12,6 +12,7 @@ const ContextPage: NextPage = () => {
       <ComponentOne/>
       <ComponentTwo/>
       <ComponentThree/>
+      <ComponentFour/>
     </div>
   )
 }
@@ -19,7 +20,7 @@ const ContextPage: NextPage = () => {
 export default ContextPage
 
 const ComponentOne = () => {
-  console.log("render ComponentOne")
+  console.log("ONE: basic child which doesn't use useContext")
 
   return (<div>one</div>)
 }
@@ -27,15 +28,27 @@ const ComponentOne = () => {
 const ComponentTwo = () => {
   const {count} = useCounterContext()
 
-  console.log("render ComponentTwo")
+  console.log("TWO: use updated context state")
 
   return (<div>two</div>)
 }
 
 const ComponentThree = memo(() => {
-  console.log("render ComponentThree")
+  console.log("THREE: use memo, not using useContext")
 
-  return (<div>one</div>)
+  return (<div>trhhe</div>)
 })
 
 ComponentThree.displayName = "ComponentThree"
+
+const ComponentFour = memo(() => {
+  const {increase} = useCounterContext()
+
+  console.log("FOUR: use non-updated context state")
+
+  return (<div>four</div>)
+})
+
+ComponentFour.displayName = "ComponentFour"
+
+
